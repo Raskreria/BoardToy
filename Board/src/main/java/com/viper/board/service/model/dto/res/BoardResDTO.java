@@ -15,7 +15,7 @@ public class BoardResDTO {
         private String title;
         private String content;
         private Long writerId;
-        private LocalDateTime regDate;
-        private LocalDateTime modDate;
+        private LocalDateTime regDt;
+        private LocalDateTime modDt;
     }
 }

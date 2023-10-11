@@ -15,7 +15,7 @@ public class ReplyResDTO {
         private String content;
         private Long writerId;
         private Long boardId;
-        private LocalDateTime regDate;
-        private LocalDateTime modDate;
+        private LocalDateTime regDt;
+        private LocalDateTime modDt;
     }
 }
