@@ -1,2 +1,0 @@
-# BoardToy
-Spring Toy Project
