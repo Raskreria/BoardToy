@@ -6,9 +6,7 @@ import com.viper.board.service.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -19,6 +17,17 @@ public class ViewController {
     final UserService userService;
     final ReplyService replyService;
 
+    //AWS상의 form태그를 통한 post request 테스트 : 통과
+    @PostMapping("/test")
+    public void postTest(@RequestParam(name="test") String data){
+        System.out.println("data = " + data);
+    }
+
+    @GetMapping("/join")
+    public String showJoin() {
+        return "login/join";
+    }
+
     @GetMapping("/board")
     public String showBoard() {
         return "board/board";
@@ -28,6 +37,8 @@ public class ViewController {
     public String showHomeLogin() {
         return "login/login";
     }
+
+
 
     @GetMapping("/board/detail/{boardId}")
     public String showBoardDetail(Model model, @PathVariable Long boardId) {

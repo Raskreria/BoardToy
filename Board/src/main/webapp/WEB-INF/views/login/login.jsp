@@ -57,6 +57,7 @@
 
                 <button id="loginbtn" class="w-100 btn btn-lg btn-dark my-1" type="button">로그인</button>
                 <button id="joinbtn" class="w-100 btn btn-lg btn-dark" type="button">회원가입</button>
+                <a href="/join">회원가입</a>
             </form>
         </main>
 
@@ -69,7 +70,7 @@
                 console.log(id);
                 console.log(pw);
                 $.ajax({
-                    url: "",
+                    url: "/api/",
                     type: "POST",
                     data: "id=" + id + "&pw=" + pw,
                     success: function (result) {
@@ -87,7 +88,7 @@
                 });
             });
             $("#joinbtn").on("click", function () {
-                location.href = "";
+                location.href = "/join";
             });
         </script>
     </body>

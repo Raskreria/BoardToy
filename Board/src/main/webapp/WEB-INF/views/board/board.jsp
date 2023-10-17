@@ -19,7 +19,7 @@
     </head>
 
     <!-- 	게시판 목록 -->
-    <div id="boardListform" class="container col-8">
+    <div id="boardListformDiv" class="container col-8">
         <table class="table caption-top">
             <thead>
                 <tr>
